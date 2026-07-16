@@ -1,67 +1,148 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>L'Espoir des Jeunes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'Espoir des Jeunes</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-    }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    header {
-      background: #0b6e4f;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7f9;
+}
 
-    main {
-      text-align: center;
-      padding: 40px 20px;
-    }
+header{
+    background:#0b6e4f;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
 
-    h2 {
-      color: #0b6e4f;
-    }
+nav{
+    background:#09543d;
+    padding:15px;
+    text-align:center;
+}
 
-    p {
-      font-size: 18px;
-      color: #444;
-    }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
 
-    button {
-      background: #0b6e4f;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+.hero{
+    padding:60px 20px;
+    text-align:center;
+}
 
-    button:hover {
-      background: #09543d;
-    }
-  </style>
+.hero h2{
+    color:#0b6e4f;
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#555;
+    margin-bottom:30px;
+}
+
+button{
+    background:#0b6e4f;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#09543d;
+}
+
+.section{
+    padding:40px 20px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+
 </head>
-
 <body>
 
 <header>
-  <h1>L'Espoir des Jeunes</h1>
-  <p>Plateforme de formation en ligne</p>
+<h1>L'Espoir des Jeunes</h1>
+<p>Plateforme de formation en ligne</p>
 </header>
 
-<main>
-  <h2>Bienvenue !</h2>
-  <p>Notre application est en cours de développement.</p>
+<nav>
+<a href="#">Accueil</a>
+<a href="#">Cours</a>
+<a href="#">Inscription</a>
+<a href="#">Connexion</a>
+<a href="#">Contact</a>
+</nav>
 
-  <button>Explorer les cours</button>
-</main>
+<section class="hero">
+<h2>Bienvenue !</h2>
+<p>Développez vos compétences grâce à des formations accessibles à tous.</p>
+
+<button>Commencer maintenant</button>
+</section>
+
+<section class="section">
+<div class="cards">
+
+<div class="card">
+<h3>💻 Informatique</h3>
+<p>Apprenez le développement web et la programmation.</p>
+</div>
+
+<div class="card">
+<h3>📚 Éducation</h3>
+<p>Des cours pratiques pour progresser à votre rythme.</p>
+</div>
+
+<div class="card">
+<h3>🎓 Certificats</h3>
+<p>Recevez une attestation après votre formation.</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 L'Espoir des Jeunes - Tous droits réservés.</p>
+</footer>
 
 </body>
-  </html>
+</html>
