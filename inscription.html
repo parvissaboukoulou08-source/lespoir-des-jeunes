@@ -6,71 +6,100 @@
 <title>Inscription - L'Espoir des Jeunes</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
     font-family:Arial,sans-serif;
     background:#f4f7f9;
-    margin:0;
 }
 
 header{
     background:#0b6e4f;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
 }
 
-form{
+.container{
+    max-width:500px;
+    margin:30px auto;
     background:white;
-    max-width:400px;
-    margin:40px auto;
-    padding:20px;
+    padding:25px;
     border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 h2{
     text-align:center;
     color:#0b6e4f;
+    margin-bottom:20px;
 }
 
-input{
+input,select{
     width:100%;
     padding:12px;
-    margin:10px 0;
+    margin-bottom:15px;
     border:1px solid #ccc;
-    border-radius:5px;
-    box-sizing:border-box;
+    border-radius:6px;
+    font-size:16px;
 }
 
 button{
     width:100%;
-    padding:12px;
+    padding:15px;
     background:#0b6e4f;
     color:white;
     border:none;
-    border-radius:5px;
-    font-size:16px;
+    border-radius:6px;
+    font-size:18px;
     cursor:pointer;
 }
 
 button:hover{
     background:#09543d;
 }
+
+a{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    text-decoration:none;
+    color:#0b6e4f;
+    font-weight:bold;
+}
 </style>
+
 </head>
 
 <body>
 
 <header>
-<h1>L'Espoir des Jeunes</h1>
+<h1>Inscription</h1>
+<p>L'Espoir des Jeunes</p>
 </header>
 
-<form>
+<div class="container">
+
 <h2>Créer un compte</h2>
+
+<form>
 
 <input type="text" placeholder="Nom complet" required>
 
 <input type="email" placeholder="Adresse e-mail" required>
+
+<input type="tel" placeholder="Téléphone" required>
+
+<select required>
+<option value="">Choisir une formation</option>
+<option>Informatique</option>
+<option>Éducation</option>
+<option>Entrepreneuriat</option>
+</select>
 
 <input type="password" placeholder="Mot de passe" required>
 
@@ -80,5 +109,11 @@ button:hover{
 
 </form>
 
+<a href="index.html">← Retour à l'accueil</a>
+
+</div>
+
 </body>
-  </html>
+    </html>
+</body>
+</html>
