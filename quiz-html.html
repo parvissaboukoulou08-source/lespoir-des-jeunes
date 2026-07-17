@@ -86,8 +86,13 @@ function corrigerQuiz() {
         score++;
     }
 
+    if (score === 2) {
     document.getElementById("resultat").innerHTML =
-        "<h3>Votre score : " + score + "/2</h3>";
+        "<h3>🎉 Bravo ! Votre score : 2/2</h3>";
+} else {
+    document.getElementById("resultat").innerHTML =
+        "<h3>😕 Votre score : " + score + "/2. Réessayez !</h3>";
+    }
 }
 </script>
 
