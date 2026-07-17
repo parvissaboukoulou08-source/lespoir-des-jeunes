@@ -72,23 +72,24 @@ Voir la réponse
 <a href="html-css.html">
 <button>← Retour au cours</button>
 </a>
-    <script>
+<script>
 function corrigerQuiz() {
     let score = 0;
 
-    if (document.querySelector('input[name="q1"]:checked')?.value == "1") {
+    if (document.querySelector('input[name="q1"]:checked') &&
+        document.querySelector('input[name="q1"]:checked').value === "1") {
         score++;
     }
 
-    if (document.querySelector('input[name="q2"]:checked')?.value == "1") {
+    if (document.querySelector('input[name="q2"]:checked') &&
+        document.querySelector('input[name="q2"]:checked').value === "1") {
         score++;
+    }
 
     document.getElementById("resultat").innerHTML =
         "<h3>Votre score : " + score + "/2</h3>";
-        }
-    "
 }
-    </script>
+</script>
 
 </body>
   </html>
