@@ -54,12 +54,12 @@ a{
 
 <p><b>1. Que signifie HTML ?</b></p>
 
-<input type="radio" name="q1"> HyperText Markup Language<br>
-<input type="radio" name="q1"> High Text Machine Language<br><br>
-<p><b>2. Quelle balise crée un lien ?</b></p>
+<input type="radio" name="q1" value="1"> HyperText Markup Language<br>
+<input type="radio" name="q1" value="0"> High Text Machine Language<br><br>
 
-<input type="radio" name="q2"> &lt;a&gt; (Bonne réponse)<br>
-<input type="radio" name="q2"> &lt;img&gt;<br>
+<p><b>2. Quelle balise crée un lien ?</b></p>
+<input type="radio" name="q2" value="1"> &lt;a&gt;<br>
+<input type="radio" name="q2" value="0"> &lt;img&gt;<br>
 <button onclick="corrigerQuiz()">
 Voir mon score
 </button>
@@ -76,24 +76,17 @@ Voir la réponse
 function corrigerQuiz() {
     let score = 0;
 
-if (document.querySelector('input[name="q1"]:checked') &&
-    document.querySelector('input[name="q1"]:checked').nextSibling.textContent.includes("HyperText")) {
-    score++;
-}
+    if (document.querySelector('input[name="q1"]:checked')?.value == "1") {
+        score++;
+    }
 
-if (document.querySelector('input[name="q2"]:checked') &&
-    document.querySelector('input[name="q2"]:checked').nextSibling.textContent..includes("Bonne réponse")) {
-    score++;
-}
+    if (document.querySelector('input[name="q2"]:checked')?.value == "1") {
+        score++;
 
-document.getElementById("resultat").innerHTML =
-if (score === 2) {
     document.getElementById("resultat").innerHTML =
-    "<h3>🎉 Bravo ! Vous avez obtenu " + score + "/2</h3>";
-} else {
-    document.getElementById("resultat").innerHTML =
-    "<h3>❌ Vous avez obtenu " + score + "/2. Réessayez !</h3>";
-}
+        "<h3>Votre score : " + score + "/2</h3>";
+        }
+    "
 }
     </script>
 
