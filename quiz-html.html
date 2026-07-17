@@ -60,7 +60,11 @@ a{
 
 <input type="radio" name="q2"> &lt;a&gt;<br>
 <input type="radio" name="q2"> &lt;img&gt;<br>
-<button onclick="alert('Bonne réponse : HyperText Markup Language')">
+<button onclick="corrigerQuiz()">
+Voir mon score
+</button>
+
+<p id="resultat"></p>
 Voir la réponse
 </button>
 
@@ -68,6 +72,24 @@ Voir la réponse
 
 <a href="html-css.html">
 <button>← Retour au cours</button>
+    <script>
+function corrigerQuiz() {
+    let score = 0;
+
+    if (document.querySelector('input[name="q1"]:checked') &&
+        document.querySelector('input[name="q1"]:checked').nextSibling.textContent.includes("HyperText")) {
+        score++;
+    }
+
+    if (document.querySelector('input[name="q2"]:checked') &&
+        document.querySelector('input[name="q2"]:checked').nextSibling.textContent.includes("a")) {
+        score++;
+    }
+
+    document.getElementById("resultat").innerHTML =
+        "<h3>Votre score est : " + score + "/2</h3>";
+}
+    </script>
 </a>
 
 </div>
