@@ -65,7 +65,7 @@ header{
 
 <p>Ce certificat est décerné à :</p>
 
-<h2>Nom de l'apprenant</h2>
+<h2 id="nomApprenant">Nom de l'apprenant</h2>
 
 <p>Pour avoir réussi avec succès le cours HTML et son quiz.</p>
 
@@ -77,6 +77,9 @@ header{
 <a href="dashboard.html" class="button">⬅ Retour au tableau de bord</a>
 
 </div>
-
+<script>
+document.getElementById("nomApprenant").innerHTML =
+localStorage.getItem("nom") || "Apprenant";
+    </script>
 </body>
 </html>
