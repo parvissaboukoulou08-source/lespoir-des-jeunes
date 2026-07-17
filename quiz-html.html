@@ -74,8 +74,26 @@ Voir la réponse
 </a>
     <script>
 function corrigerQuiz() {
+    let score = 0;
+
+if (document.querySelector('input[name="q1"]:checked') &&
+    document.querySelector('input[name="q1"]:checked').nextSibling.textContent.includes("HyperText")) {
+    score++;
+}
+
+if (document.querySelector('input[name="q2"]:checked') &&
+    document.querySelector('input[name="q2"]:checked').nextSibling.textContent..includes("Bonne réponse")) {
+    score++;
+}
+
+document.getElementById("resultat").innerHTML =
+if (score === 2) {
     document.getElementById("resultat").innerHTML =
-    "<h3>Bonne réponse :</h3><p>1. HyperText Markup Language<br>2. &lt;a&gt; crée un lien.</p>";
+    "<h3>🎉 Bravo ! Vous avez obtenu " + score + "/2</h3>";
+} else {
+    document.getElementById("resultat").innerHTML =
+    "<h3>❌ Vous avez obtenu " + score + "/2. Réessayez !</h3>";
+}
 }
     </script>
 
