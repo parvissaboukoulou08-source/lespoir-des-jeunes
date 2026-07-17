@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz HTML</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7f9;
+    margin:0;
+}
+
+header{
+    background:#0b6e4f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    max-width:700px;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+button{
+    background:#0b6e4f;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+a{
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Quiz HTML</h1>
+<p>Répondez aux questions</p>
+</header>
+
+<div class="container">
+
+<p><b>1. Que signifie HTML ?</b></p>
+
+<input type="radio" name="q1"> HyperText Markup Language<br>
+<input type="radio" name="q1"> High Text Machine Language<br><br>
+
+<button onclick="alert('Bonne réponse : HyperText Markup Language')">
+Voir la réponse
+</button>
+
+<br><br>
+
+<a href="html-css.html">
+<button>← Retour au cours</button>
+</a>
+
+</div>
+
+</body>
+  </html>
