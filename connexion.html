@@ -71,9 +71,9 @@ font-weight:bold;
 
 <h2>Se connecter</h2>
 
-<input type="email" placeholder="Adresse e-mail">
+<input type="email" id="email" placeholder="Adresse e-mail">
 
-<input type="password" placeholder="Mot de passe">
+<input type="password" id="password" placeholder="Mot de passe">
 
 <button type="button" onclick="connexion()">Se connecter</button>
 
@@ -82,10 +82,17 @@ font-weight:bold;
 </div>
 
 <script>
-function connexion(){
-alert("Connexion réussie !");
-window.location.href="dashboard.html";
-}
+function connexion() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (email === "" || password === "") {
+        alert("Veuillez remplir tous les champs.");
+    } else {
+        alert("Connexion réussie !");
+        window.location.href = "dashboard.html";
+    }
+  }
   </script>
 </body>
 </html>
