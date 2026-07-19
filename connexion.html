@@ -75,24 +75,47 @@ font-weight:bold;
 
 <input type="password" id="password" placeholder="Mot de passe">
 
-<button type="button" onclick="connexion()">Se connecter</button>
-
+<button type="submit">Se connecter</button>
+    
 <a href="index.html">← Retour à l'accueil</a>
 
 </div>
 
 <script>
-function connexion() {
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
+  // On écoute la soumission du formulaire
+  document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Empêche la page de se recharger
 
-    if (email === "" || password === "") {
-        alert("Veuillez remplir tous les champs.");
-    } else {
-        alert("Connexion réussie !");
-        window.location.href = "dashboard.html";
+    // Récupération des valeurs avec vos identifiants exacts
+    const email = document.getElementById('email').value;
+    const motDePasse = document.getElementById('password').value;
+
+    if (!email || !motDePasse) {
+      alert('Veuillez remplir tous les champs.');
+      return;
     }
-  }
-  </script>
+
+    // Recherche du compte enregistré dans la mémoire
+    const compteStocke = localStorage.getItem('user_' + email);
+
+    if (compteStocke) {
+      const utilisateur = JSON.parse(compteStocke);
+
+      // Vérification du mot de passe
+      if (utilisateur.password === motDePasse) {
+        // Connexion réussie : on crée la session active
+        localStorage.setItem('session_active', JSON.stringify(utilisateur));
+        
+        alert('Connexion réussie ! Bienvenue dans votre espace.');
+        window.location.href = 'dashboard.html';
+      } else {
+        alert('Mot de passe incorrect.');
+      }
+    } else {
+      alert('Aucun compte trouvé avec cet e-mail. Veuillez vous inscrire.');
+    }
+  });
+</script>
+    
 </body>
 </html>
