@@ -73,28 +73,51 @@ Voir la réponse
 <button>← Retour au cours</button>
 </a>
 <script>
-function corrigerQuiz() {
+  // Sécurité : Vérifier si l'utilisateur est bien connecté
+  const sessionActive = localStorage.getItem('session_active');
+  if (!sessionActive) {
+    alert('Veuillez vous connecter pour passer le quiz.');
+    window.location.href = 'connexion.html';
+  }
+
+  function corrigerQuiz() {
     let score = 0;
 
-    if (document.querySelector('input[name="q1"]:checked') &&
-        document.querySelector('input[name="q1"]:checked').value === "1") {
-        score++;
+    // Récupération et vérification des réponses (valeur "1" pour la bonne réponse)
+    const q1Checked = document.querySelector('input[name="q1"]:checked');
+    const q2Checked = document.querySelector('input[name="q2"]:checked');
+
+    if (!q1Checked || !q2Checked) {
+      alert("Veuillez répondre à toutes les questions avant de valider !");
+      return;
     }
 
-    if (document.querySelector('input[name="q2"]:checked') &&
-        document.querySelector('input[name="q2"]:checked').value === "1") {
-        score++;
-    }
+    if (q1Checked.value === "1") score++;
+    if (q2Checked.value === "1") score++;
+
+    const divResultat = document.getElementById("resultat");
 
     if (score === 2) {
-    document.getElementById("resultat").innerHTML =
-        "<h3>🎉 Bravo ! Votre score : 2/2</h3>";
-} else {
-    document.getElementById("resultat").innerHTML =
-        "<h3>😕 Votre score : " + score + "/2. Réessayez !</h3>";
+      divResultat.innerHTML = "<h3>🎉 Bravo ! Votre score : 2/2. Module HTML validé !</h3>";
+      divResultat.style.color = "#006644";
+
+      // Sauvegarde automatique du module réussi dans le profil
+      const utilisateur = JSON.parse(sessionActive);
+      
+      if (!utilisateur.formationsValides.includes('HTML')) {
+        utilisateur.formationsValides.push('HTML');
+        
+        // Mise à jour de la session locale et du stockage global
+        localStorage.setItem('session_active', JSON.stringify(utilisateur));
+        localStorage.setItem('user_' + utilisateur.email, JSON.stringify(utilisateur));
+      }
+    } else {
+      divResultat.innerHTML = `<h3>😐 Votre score : ${score}/2. Réessayez pour obtenir 2/2 et valider !</h3>`;
+      divResultat.style.color = "#cc0000";
     }
-}
+  }
 </script>
+    
 
 </body>
   </html>
