@@ -58,28 +58,40 @@ header{
 
 <div class="container">
 
-<div class="card">
-<h2>🏆 Certificat de réussite</h2>
-
-<h3>L'Espoir des Jeunes</h3>
-
-<p>Ce certificat est décerné à :</p>
-
-<h2 id="nomApprenant">Nom de l'apprenant</h2>
-
-<p>Pour avoir réussi avec succès le cours HTML et son quiz.</p>
-
-<p><strong>Score : 2/2</strong></p>
-
-<p>🎉 Félicitations !</p>
+<div class="card" id="blocCertificat">
+  <h2>🏆 Certificat de réussite</h2>
+  <h3>L'Espoir des Jeunes</h3>
+  <p>Ce certificat est décerné à :</p>
+  <h2 id="nomApprenant">Nom de l'apprenant</h2>
+  <p>Pour avoir réussi avec succès le cours HTML et son quiz.</p>
+  <p><strong>Score : 2/2</strong></p>
+  <p>🎉 Félicitations !</p>
 </div>
 
-<a href="dashboard.html" class="button">⬅ Retour au tableau de bord</a>
+<a href="dashboard.html" class="button">- Retour au tableau de bord</a>
 
 </div>
+
 <script>
-document.getElementById("nomApprenant").innerHTML =
-localStorage.getItem("nom") || "Apprenant";
-    </script>
+  const sessionActive = localStorage.getItem('session_active');
+  const blocCertificat = document.getElementById('blocCertificat');
+
+  if (sessionActive) {
+    const utilisateur = JSON.parse(sessionActive);
+    document.getElementById('nomApprenant').innerHTML = utilisateur.nom;
+
+    if (utilisateur.formationsValides && utilisateur.formationsValides.includes('HTML')) {
+      blocCertificat.style.display = 'block';
+    } else {
+      blocCertificat.innerHTML = "<h3>🔒 Vous n'avez pas encore validé ce certificat. Obtenez un score de 2/2 au Quiz HTML pour le débloquer !</h3>";
+      blocCertificat.style.color = "#cc0000";
+      blocCertificat.style.textAlign = "center";
+    }
+  } else {
+    alert('Veuillez vous connecter pour accéder à vos certificats.');
+    window.location.href = 'connexion.html';
+  }
+</script>
+    
 </body>
 </html>
