@@ -2,23 +2,115 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Nos Formations - L'Espoir des Jeunes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Formations Professionnelles - L'Espoir des Jeunes</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f7f9; margin: 0; padding: 20px; text-align: center; }
+        header { background: #0b6e4f; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .btn-retour { display: inline-block; background: #333; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-bottom: 20px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .section-title { font-size: 1.2em; color: #0b6e4f; text-align: left; margin-top: 25px; border-bottom: 2px solid #0b6e4f; padding-bottom: 5px; font-weight: bold; }
+        .formation-card { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; text-align: left; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .formation-name { font-weight: bold; font-size: 1.1em; color: #333; margin-bottom: 5px; }
+        .formation-desc { font-size: 0.85em; color: #666; margin-bottom: 12px; }
+        .btn-group { display: flex; gap: 8px; flex-wrap: wrap; }
+        .btn-action { flex: 1; min-width: 80px; text-align: center; color: white; padding: 8px; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 4px; }
+        .btn-online { background: #b67a00; } /* Cours (Or) */
+        .btn-docs { background: #27ae60; }   /* Docs (Vert) */
+        .btn-video { background: #2980b9; }  /* Vidéo (Bleu) */
+    </style>
 </head>
 <body>
-    <h1>Nos Formations</h1>
-    <ul>
-        <li>Management des Ressources Humaines</li>
-        <li>Logistique et Transport</li>
-        <li>Banque et Finance</li>
-        <li>Commerce International</li>
-        <li>Droit</li>
-        <li>Comptabilité et Gestion d'Entreprise</li>
-        <li>Informatique</li>
-        <li>Infographie</li>
-        <li>Vente en Pharmacie</li>
-    </ul>
-    <br>
-    <a href="cours.html">← Retour au tableau de bord</a>
+
+    <div class="container">
+        <a href="index.html" class="btn-retour">⬅️ Retour à l'accueil</a>
+        
+        <header>
+            <h1 style="margin: 0; font-size: 1.4em;">💼 Espace Formations Professionnelles</h1>
+            <p style="margin: 5px 0 0 0; font-size: 0.9em;">Suivez vos cours en ligne et téléchargez vos supports d'étude.</p>
+        </header>
+
+        <!-- CATEGORIE MANAGEMENT & GESTION -->
+        <div class="section-title">📊 Management & Commerce</div>
+        
+        <div class="formation-card">
+            <div class="formation-name">👥 Management des Ressources Humaines</div>
+            <div class="formation-desc">Gestion des équipes, contrats et administration du personnel.</div>
+            <div class="btn-group">
+                <a href="#" class="btn-action btn-online">📖 Cours</a>
+                <a href="#" class="btn-action btn-docs">📁 Docs</a>
+                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+            </div>
+        </div>
+
+        <div class="formation-card">
+            <div class="formation-name">🚢 Logistique et Transport</div>
+            <div class="formation-desc">Gestion des stocks, douane et commerce international.</div>
+            <div class="btn-group">
+                <a href="#" class="btn-action btn-online">📖 Cours</a>
+                <a href="#" class="btn-action btn-docs">📁 Docs</a>
+                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+            </div>
+        </div>
+
+        <div class="formation-card">
+            <div class="formation-name">🏦 Banque et Finance / Comptabilité</div>
+            <div class="formation-desc">Techniques bancaires, comptabilité d'entreprise et gestion financière.</div>
+            <div class="btn-group">
+                <a href="#" class="btn-action btn-online">📖 Cours</a>
+                <a href="#" class="btn-action btn-docs">📁 Docs</a>
+                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+            </div>
+        </div>
+
+        <!-- CATEGORIE TECH & DESIGN -->
+        <div class="section-title">💻 Technologies & Métiers</div>
+
+        <div class="formation-card">
+            <div class="formation-name">🌐 Informatique & Programmation</div>
+            <div class="formation-desc">Développement Web (HTML, CSS, JavaScript) et Python.</div>
+            <div class="btn-group">
+                <a href="html-css.html" class="btn-action btn-online">📖 HTML</a>
+                <a href="python.html" class="btn-action btn-online">📖 Python</a>
+                <a href="bureautique.html" class="btn-action btn-online">📖 Bureautique</a>
+            </div>
+        </div>
+
+        <div class="formation-card">
+            <div class="formation-name">🎨 Infographie</div>
+            <div class="formation-desc">Création visuelle, Photoshop, Illustrator et design publicitaire.</div>
+            <div class="btn-group">
+                <a href="#" class="btn-action btn-online">📖 Cours</a>
+                <a href="#" class="btn-action btn-docs">📁 Docs</a>
+                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+            </div>
+        </div>
+
+        <!-- CATEGORIE SANTE & DROIT -->
+        <div class="section-title">⚖️ Droit & Santé</div>
+
+        <div class="formation-card">
+            <div class="formation-name">⚖️ Droit des Affaires</div>
+            <div class="formation-desc">Fondamentaux juridiques, contrats et vie d'entreprise.</div>
+            <div class="btn-group">
+                <a href="#" class="btn-action btn-online">📖 Cours</a>
+                <a href="#" class="btn-action btn-docs">📁 Docs</a>
+                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+            </div>
+        </div>
+
+        <div class="formation-card">
+            <div class="formation-name">💊 Vente en Pharmacie</div>
+            <div class="formation-desc">Pharmacologie de base, gestion d'officine et conseil client.</div>
+            <div class="btn-group">
+                <a href="#" class="btn-action btn-online">📖 Cours</a>
+                <a href="#" class="btn-action btn-docs">📁 Docs</a>
+                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+            </div>
+        </div>
+
+    </div>
+
 </body>
-      </html>
-      
+    </html>
+    
