@@ -133,15 +133,25 @@ footer{
 </nav>
     
 
-<section class="hero">
-<h2>Bienvenue !</h2>
-<p>Développez vos compétences grâce à des formations accessibles à tous.</p>
+<section class="hero" style="text-align: center; padding: 25px 15px;">
+    <h2>Bienvenue à L'Espoir des Jeunes !</h2>
+    <p style="margin-bottom: 20px;">Sélectionnez votre espace pour accéder à vos contenus :</p>
 
-<button onclick="window.location.href='cours-hub.html'">
-    
-    Commencer maintenant
-</button>
+    <div style="display: flex; flex-direction: column; gap: 12px; max-width: 320px; margin: 0 auto;">
+        <!-- ACCÈS ECOLE -->
+        <button onclick="window.location.href='cours-hub.html'" style="background: #0b6e4f; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 1em; cursor: pointer;">
+            🎒 Espace ÉCOLE & SOUTIEN<br>
+            <span style="font-size: 0.75em; font-weight: normal; opacity: 0.9;">(Primaire, Collège, Lycée, Annales)</span>
+        </button>
+
+        <!-- ACCÈS FORMATIONS PRO -->
+        <button onclick="window.location.href='formations.html'" style="background: #b67a00; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 1em; cursor: pointer;">
+            💼 Formations Professionnelles<br>
+            <span style="font-size: 0.75em; font-weight: normal; opacity: 0.9;">(Métiers, Cours Adultes & Certificats)</span>
+        </button>
+    </div>
 </section>
+    
 
 <section class="section">
     <!-- TITRE FORMATION -->
