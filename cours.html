@@ -1,269 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mes cours</title>
-
-<style>
-body{
-    font-family:Arial,sans-serif;
-    margin:0;
-    background:#f4f7f9;
-}
-header{
-    background:#0b6e4f;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-.container{
-    max-width:900px;
-    margin:30px auto;
-    padding:20px;
-}
-.card{
-    background:white;
-    padding:20px;
-    margin-bottom:20px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-h2{
-    color:#0b6e4f;
-}
-button{
-    background:#0b6e4f;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:6px;
-    cursor:pointer;
-}
-button:hover{
-    background:#09543d;
-}
-a{
-    text-decoration:none;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace E-Learning - L'Espoir des Jeunes</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f7f9; margin: 0; padding: 20px; text-align: center; }
+        header { background: #0b6e4f; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .btn-retour { display: inline-block; background: #333; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-bottom: 20px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .info-box { background: #eef9f5; border: 2px solid #0b6e4f; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.9em; text-align: left; }
+        .card-cours { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; text-align: left; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .title-cours { font-weight: bold; font-size: 1.2em; color: #333; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 15px 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .btn-exercice { display: block; text-align: center; background: #b67a00; color: white; padding: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
+    </style>
 </head>
-
 <body>
 
-<header style="text-align: center; padding: 25px; background: #0b6e4f; color: white;">
-  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135810.png" alt="Logo École" style="height: 75px; width: auto; margin-bottom: 10px; filter: brightness(0) invert(1);">
-  <h1 style="margin: 5px 0; font-size: 24px;">L'Espoir des Jeunes</h1>
-  <p style="margin: 0; opacity: 0.9; font-size: 14px;">Votre Espace Formation En Ligne</p>
-</header>
-    
+    <div class="container">
+        <a href="formations.html" class="btn-retour">⬅️ Retour aux Formations</a>
+        
+        <header>
+            <h1 style="margin: 0; font-size: 1.4em;">📖 Votre Espace de Cours en Ligne</h1>
+            <p style="margin: 5px 0 0 0; font-size: 0.9em;">Suivez vos vidéos pédagogiques et passez vos validations.</p>
+        </header>
 
-<div class="container">
-<div class="card" style="border: 2px solid #0b6e4f; text-align: center;">
-    <h2>💳 Frais et Modalités de paiement</h2>
-    <p><strong>Frais d'inscription :</strong> 5.000 FCFA</p>
-    <p><strong>Frais mensuels :</strong> 10.000 FCFA / mois</p>
-    <p><strong>Mode de paiement :</strong> Veuillez effectuer votre règlement par Mobile Money au : <strong>06 494 43 21</strong></p>
-    <p><em>Merci de bien vouloir garder une capture d'écran de votre transaction pour la joindre lors de votre inscription.</em></p>
-</div>
-    
-    
-<div class="card">
-  <h2>💻 HTML & CSS</h2>
-  <p>Apprenez à créer des sites web modernes.</p>
-  
-  <!-- Lecteur Vidéo Professionnel (Adaptatif sur mobile) -->
-  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 15px 0; background: #000;">
-    <iframe src="https://youtube.com/embed/mE6Av_pk7zw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" title="Cours Vidéo" allowfullscreen></iframe>
-  </div>
+        <div class="info-box">
+            <strong>📌 Note aux étudiants :</strong> Suivez attentivement chaque chapitre vidéo ci-dessous avant de cliquer sur le bouton d'exercice pour valider vos connaissances.
+        </div>
 
-  <!-- Section Document de l'école -->
-  <div style="margin: 15px 0; padding: 12px; background-color: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px;">
-    <p style="margin: 0 0 8px 0; font-weight: bold; color: #166534;">📚 Support de cours :</p>
-    <a href="#" download style="display: block; text-align: center; background-color: #166534; color: white; padding: 10px; border-radius: 4px; font-weight: 500;">
-      📥 Télécharger le Guide PDF
-    </a>
-  </div>
+        <!-- MODULE 1 : INFRASTRUCTURE & WEB -->
+        <div class="card-cours">
+            <div class="title-cours">🌐 Module : HTML5 & CSS3</div>
+            <p style="font-size: 0.9em; color: #555;">Apprenez à structurer et styliser vos premières pages web professionnelles.</p>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/mE6Ax_pk7zw" allowfullscreen></iframe>
+            </div>
 
-  <a href="html-css.html">
-    <button style="width: 100%;">Commencer les exercices</button>
-  </a>
-</div>
-    
+            <a href="https://forms.gle/qHJTJGHFJsRUGpj97" target="_blank" class="btn-exercice">📝 Commencer l'exercice de validation</a>
+        </div>
 
-<div class="card">
-<h2>⚡ JavaScript</h2>
-<p>Découvrez les bases du JavaScript.</p>
-<a href="https://forms.gle/onmT6XfiD7f7YHqe7">
-    <button>Commencer</button>
-</a>
-</div>
-
-<div class="card">
-<h2>🐍 Python</h2>
-<p>Initiez-vous à la programmation avec Python.</p>
-<a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-    <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-<h2>🖥️ Bureautique</h2>
-<p>Maîtrisez Word, Excel et PowerPoint.</p>
-<a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-    <button>Commencer</button>
-</a>
-</div>
-<div class="card">
-    <h2>🤝 Management des RH</h2>
-    <p>Maîtrisez la gestion des ressources humaines et des équipes.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>🚚 Logistique et Transport</h2>
-    <p>Optimisez la chaîne d'approvisionnement et le transport.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>🏦 Banque et Finance</h2>
-    <p>Apprenez les bases de la gestion bancaire et financière.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>🌐 Commerce International</h2>
-    <p>Développez vos compétences pour les échanges mondiaux.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>⚖️ Droit</h2>
-    <p>Découvrez les fondements du droit et de la législation.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>📊 Comptabilité et Gestion</h2>
-    <p>Apprenez à gérer les finances et la comptabilité d'entreprise.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>📈 Management des Projets</h2>
-    <p>Pilotez des projets complexes avec efficacité.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>📝 Secrétariat</h2>
-    <p>Acquérez les techniques d'organisation administrative.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>💼 Assistant Manager</h2>
-    <p>Soutenez la direction dans ses missions opérationnelles.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>📉 Économie</h2>
-    <p>Comprenez les mécanismes économiques fondamentaux.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>🎨 Infographie</h2>
-    <p>Maîtrisez la création de designs visuels percutants.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>💊 Vente en Pharmacie</h2>
-    <p>Découvrez les techniques de vente spécialisées en pharmacie.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
     </div>
-<div class="card">
-    <h2>🗣️ Langues étrangères</h2>
-    <p>Perfectionnez votre maîtrise des langues internationales.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>👑 Leadership International</h2>
-    <p>Développez votre capacité à diriger et à inspirer.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>🏢 Vie d'Entreprise</h2>
-    <p>Comprenez les codes et le fonctionnement quotidien d'une société.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>🎓 Pédagogie</h2>
-    <p>Apprenez les méthodes pour transmettre et enseigner efficacement.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>🌍 Gestion des Affaires Étrangères</h2>
-    <p>Étudiez les stratégies liées aux relations internationales et diplomatiques.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-</div>
-
-<div class="card">
-    <h2>🤖 Initiation à l'Intelligence Artificielle</h2>
-    <p>Découvrez les bases et les outils de l'IA moderne.</p>
-    <a href="https://forms.gle/qtTJGHFJsRUGpj9g7">
-        <button>Commencer</button>
-    </a>
-    </div>
-    
-<p style="text-align:center;">
-<a href="dashboard.html">
-<button>⬅ Retour au tableau de bord</button>
-</a>
-</p>
-
-</div>
 
 </body>
-  </html>
+</html>
