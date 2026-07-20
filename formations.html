@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espace Formations Professionnelles - L'Espoir des Jeunes</title>
+    <title>Nos Formations Professionnelles - L'Espoir des Jeunes</title>
     <style>
         body { font-family: Arial, sans-serif; background: #f4f7f9; margin: 0; padding: 20px; text-align: center; }
-        header { background: #0b6e4f; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        header { background: #b67a00; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
         .btn-retour { display: inline-block; background: #333; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-bottom: 20px; }
-        .container { max-width: 600px; margin: 0 auto; }
-        .section-title { font-size: 1.2em; color: #0b6e4f; text-align: left; margin-top: 25px; border-bottom: 2px solid #0b6e4f; padding-bottom: 5px; font-weight: bold; }
-        .formation-card { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; text-align: left; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .formation-name { font-weight: bold; font-size: 1.1em; color: #333; margin-bottom: 5px; }
-        .formation-desc { font-size: 0.85em; color: #666; margin-bottom: 12px; }
-        .btn-group { display: flex; gap: 8px; flex-wrap: wrap; }
-        .btn-action { flex: 1; min-width: 80px; text-align: center; color: white; padding: 8px; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 4px; }
-        .btn-online { background: #b67a00; } /* Cours (Or) */
-        .btn-docs { background: #27ae60; }   /* Docs (Vert) */
-        .btn-video { background: #2980b9; }  /* Vidéo (Bleu) */
+        .container { max-width: 1000px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; text-align: left; }
+        .card { background: white; padding: 18px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-top: 4px solid #b67a00; display: flex; flex-direction: column; justify-content: space-between; }
+        .card h3 { margin: 0 0 8px 0; color: #333; font-size: 1.05em; display: flex; align-items: center; gap: 8px; }
+        .card p { font-size: 0.85em; color: #666; margin: 0 0 12px 0; flex-grow: 1; line-height: 1.4; }
+        .btn-accéder { display: block; text-align: center; background: #0b6e4f; color: white; padding: 8px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.85em; }
+        .btn-accéder:hover { background: #08533b; }
+        /* Style spécial pour mettre en valeur la première formation */
+        .vedette { border-top: 4px solid #0b6e4f; background: #f0faf6; }
     </style>
 </head>
 <body>
@@ -26,91 +25,154 @@
         <a href="index.html" class="btn-retour">⬅️ Retour à l'accueil</a>
         
         <header>
-            <h1 style="margin: 0; font-size: 1.4em;">💼 Espace Formations Professionnelles</h1>
-            <p style="margin: 5px 0 0 0; font-size: 0.9em;">Suivez vos cours en ligne et téléchargez vos supports d'étude.</p>
+            <h1 style="margin: 0; font-size: 1.4em;">💼 Nos Formations Professionnelles</h1>
+            <p style="margin: 5px 0 0 0; font-size: 0.9em;">Investissez en vous, construisez votre avenir ! Attestation ou Certificat de fin de formation.</p>
         </header>
 
-        <!-- CATEGORIE MANAGEMENT & GESTION -->
-        <div class="section-title">📊 Management & Commerce</div>
-        
-        <div class="formation-card">
-            <div class="formation-name">👥 Management des Ressources Humaines</div>
-            <div class="formation-desc">Gestion des équipes, contrats et administration du personnel.</div>
-            <div class="btn-group">
-                <a href="#" class="btn-action btn-online">📖 Cours</a>
-                <a href="#" class="btn-action btn-docs">📁 Docs</a>
-                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+        <div class="grid">
+            <!-- 1. MANAGEMENT & ENTREPRENEURIAT (MIS EN PREMIER) -->
+            <div class="card vedette">
+                <h3>🚀 1. Management & Entrepreneuriat</h3>
+                <p>Création d'entreprise, élaboration de Business Plan, leadership de direction et stratégies de croissance.</p>
+                <a href="entrepreneuriat.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
             </div>
-        </div>
 
-        <div class="formation-card">
-            <div class="formation-name">🚢 Logistique et Transport</div>
-            <div class="formation-desc">Gestion des stocks, douane et commerce international.</div>
-            <div class="btn-group">
-                <a href="#" class="btn-action btn-online">📖 Cours</a>
-                <a href="#" class="btn-action btn-docs">📁 Docs</a>
-                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+            <!-- 2. MANAGEMENT DES RH -->
+            <div class="card">
+                <h3>👥 2. Management des RH</h3>
+                <p>Gestion administrative du personnel, contrats de travail, gestion de la paie et des compétences.</p>
+                <a href="rh.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
             </div>
-        </div>
 
-        <div class="formation-card">
-            <div class="formation-name">🏦 Banque et Finance / Comptabilité</div>
-            <div class="formation-desc">Techniques bancaires, comptabilité d'entreprise et gestion financière.</div>
-            <div class="btn-group">
-                <a href="#" class="btn-action btn-online">📖 Cours</a>
-                <a href="#" class="btn-action btn-docs">📁 Docs</a>
-                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+            <!-- 3. LOGISTIQUE ET TRANSPORT -->
+            <div class="card">
+                <h3>🚚 3. Logistique & Transport</h3>
+                <p>Gestion de la chaîne logistique (Supply Chain), optimisation des stocks et transports nationaux.</p>
+                <a href="logistique.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
             </div>
-        </div>
 
-        <!-- CATEGORIE TECH & DESIGN -->
-        <div class="section-title">💻 Technologies & Métiers</div>
-
-        <div class="formation-card">
-            <div class="formation-name">🌐 Informatique & Programmation</div>
-            <div class="formation-desc">Développement Web (HTML, CSS, JavaScript) et Python.</div>
-            <div class="btn-group">
-                <a href="html-css.html" class="btn-action btn-online">📖 HTML</a>
-                <a href="python.html" class="btn-action btn-online">📖 Python</a>
-                <a href="bureautique.html" class="btn-action btn-online">📖 Bureautique</a>
+            <!-- 4. BANQUE ET FINANCE -->
+            <div class="card">
+                <h3>🏦 4. Banque & Finance</h3>
+                <p>Compréhension des mécanismes bancaires, gestion des portefeuilles clients et analyse financière.</p>
+                <a href="banque.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
             </div>
-        </div>
 
-        <div class="formation-card">
-            <div class="formation-name">🎨 Infographie</div>
-            <div class="formation-desc">Création visuelle, Photoshop, Illustrator et design publicitaire.</div>
-            <div class="btn-group">
-                <a href="#" class="btn-action btn-online">📖 Cours</a>
-                <a href="#" class="btn-action btn-docs">📁 Docs</a>
-                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+            <!-- 5. COMMERCE INTERNATIONAL -->
+            <div class="card">
+                <h3>🚢 5. Commerce International</h3>
+                <p>Techniques d'import-export, réglementation douanière, transit et commerce mondial.</p>
+                <a href="commerce-inter.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
             </div>
-        </div>
 
-        <!-- CATEGORIE SANTE & DROIT -->
-        <div class="section-title">⚖️ Droit & Santé</div>
-
-        <div class="formation-card">
-            <div class="formation-name">⚖️ Droit des Affaires</div>
-            <div class="formation-desc">Fondamentaux juridiques, contrats et vie d'entreprise.</div>
-            <div class="btn-group">
-                <a href="#" class="btn-action btn-online">📖 Cours</a>
-                <a href="#" class="btn-action btn-docs">📁 Docs</a>
-                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+            <!-- 6. DROIT -->
+            <div class="card">
+                <h3>⚖️ 6. Droit des Affaires</h3>
+                <p>Fondamentaux du droit appliqué aux entreprises, contrats commerciaux et litiges.</p>
+                <a href="droit.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
             </div>
-        </div>
 
-        <div class="formation-card">
-            <div class="formation-name">💊 Vente en Pharmacie</div>
-            <div class="formation-desc">Pharmacologie de base, gestion d'officine et conseil client.</div>
-            <div class="btn-group">
-                <a href="#" class="btn-action btn-online">📖 Cours</a>
-                <a href="#" class="btn-action btn-docs">📁 Docs</a>
-                <a href="#" class="btn-action btn-video">🎥 Vidéos</a>
+            <!-- 7. COMPTABILITÉ -->
+            <div class="card">
+                <h3>📊 7. Comptabilité & Gestion</h3>
+                <p>Enregistrement des pièces, élaboration des bilans, comptes de résultat et gestion financière.</p>
+                <a href="comptabilite.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 8. VIE D'ENTREPRISE -->
+            <div class="card">
+                <h3>🏢 8. Vie d'Entreprise</h3>
+                <p>Comprendre la culture d'entreprise, les structures organisationnelles et le travail collaboratif.</p>
+                <a href="vie-entreprise.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 9. MANAGEMENT DES PROJETS -->
+            <div class="card">
+                <h3>📈 9. Management des Projets</h3>
+                <p>Méthodologies de planification, respect des budgets, outils de suivi et management des risques.</p>
+                <a href="management-projets.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 10. LANGUES ÉTRANGÈRES -->
+            <div class="card">
+                <h3>🗣️ 10. Langues Étrangères</h3>
+                <p>Perfectionnement en communication linguistique professionnelle (Anglais d'affaires, etc.).</p>
+                <a href="langues.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 11. LEADERSHIP INTERNATIONAL -->
+            <div class="card">
+                <h3>🦁 11. Leadership International</h3>
+                <p>Développer son charisme, la prise de parole en public et la conduite du changement d'équipe.</p>
+                <a href="leadership.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 12. INFORMATIQUE -->
+            <div class="card">
+                <h3>🌐 12. Informatique Générale</h3>
+                <p>Maîtrise de l'outil informatique, maintenance de base, sécurité des données et navigation web.</p>
+                <a href="informatique.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 13. PROGRAMMATION -->
+            <div class="card">
+                <h3>💻 13. Programmation & Web</h3>
+                <p>Apprentissage de la logique algorithmique et création de sites internet (HTML5, CSS3, JavaScript).</p>
+                <a href="programmation.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 14. SECRÉTARIAT -->
+            <div class="card">
+                <h3>🗂️ 14. Secrétariat Bureautique</h3>
+                <p>Gestion d'accueil, traitement des courriers professionnels, archivage et outils de secrétariat.</p>
+                <a href="secretariat.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 15. ASSISTANT MANAGER -->
+            <div class="card">
+                <h3>👔 15. Assistant Manager</h3>
+                <p>Soutien stratégique aux dirigeants, gestion des plannings complexes et coordination des services.</p>
+                <a href="assistant-manager.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 16. ÉCONOMIE -->
+            <div class="card">
+                <h3>📉 16. Économie & Marchés</h3>
+                <p>Analyse macro-économique, micro-économique et compréhension des enjeux de marché.</p>
+                <a href="economie.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 17. PÉDAGOGIE ET GESTION DES AFFAIRES -->
+            <div class="card">
+                <h3>🎓 17. Pédagogie & Affaires Étrangères</h3>
+                <p>Méthodes d'apprentissage et initiation aux relations internationales commerciales.</p>
+                <a href="pedagogie.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 18. INFOGRAPHIE -->
+            <div class="card">
+                <h3>🎨 18. Infographie & Design</h3>
+                <p>Conception visuelle publicitaire et prise en main de la suite Adobe (Photoshop, Illustrator).</p>
+                <a href="infographie.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- 19. VENTE EN PHARMACIE -->
+            <div class="card">
+                <h3>💊 19. Vente en Pharmacie</h3>
+                <p>Gestion d'officine, classification des médicaments et conseil client en pharmacie.</p>
+                <a href="pharmacie.html" class="btn-accéder">▶️ Entrer dans l'espace</a>
+            </div>
+
+            <!-- INTEGRATION / BONUS : INTELLIGENCE ARTIFICIELLE -->
+            <div class="card" style="border-top-color: #000; background: #eef9f5;">
+                <h3>🤖 Initiation à l'I.A.</h3>
+                <p>Comprendre et utiliser les IA modernes (ChatGPT, automatisation) pour booster votre productivité au quotidien.</p>
+                <a href="ia.html" class="btn-accéder" style="background: #b67a00;">▶️ Entrer dans l'espace</a>
             </div>
         </div>
 
     </div>
 
 </body>
-    </html>
+                </html>
     
